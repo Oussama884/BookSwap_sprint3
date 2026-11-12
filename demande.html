@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSwap - Demandes d'échange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-indigo-600">
+                BookSwap
+            </h1>
+
+            <nav class="flex gap-6 text-gray-600">
+                <a href="#" class="hover:text-indigo-600">Accueil</a>
+                <a href="#" class="hover:text-indigo-600">Livres</a>
+                <a href="#" class="text-indigo-600 font-semibold">Demandes</a>
+                <a href="#" class="hover:text-indigo-600">Mes échanges</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="max-w-7xl mx-auto px-6 py-10">
+
+        <!-- TITLE -->
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800">
+                Demandes d'échange
+            </h2>
+            <p class="text-gray-500 mt-2">
+                Découvrez les demandes et les propositions des apprenants.
+            </p>
+        </div>
+
+        <!-- SEARCH AND FILTER -->
+        <div class="bg-white p-5 rounded-xl shadow-sm mb-8 flex flex-col md:flex-row gap-4">
+
+            <input
+                type="text"
+                id="recherche"
+                placeholder="Rechercher un livre ou un utilisateur..."
+                class="flex-1 border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-indigo-500"
+            >
+        
+            <select id="typeFiltre" class="border border-gray-300 rounded-lg px-4 py-3 outline-none">
+                <option value="">Tous les types</option>
+                <option value="permanent">Permanent</option>
+                <option value="temporary">Temporaire</option>
+            </select>
+        
+            <select id="statutFiltre" class="border border-gray-300 rounded-lg px-4 py-3 outline-none">
+                <option value="">Tous les statuts</option>
+                <option value="open">Ouverte</option>
+                <option value="closed">Clôturée</option>
+                <option value="cancelled">Annulée</option>
+            </select>
+        
+            <button id="actualiser" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700">
+                Actualiser
+            </button>
+        
+        </div>
+<!-- REQUESTS -->
+<div id="demande" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+    <!-- DEMANDE 14 -->
+    <div class="bg-white rounded-xl shadow-sm p-5">
+
+        <div class="flex justify-between items-center mb-4">
+            <span class="text-sm font-semibold text-gray-500">Demande #14</span>
+            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs">Ouverte</span>
+        </div>
+
+        <div class="flex gap-4">
+            <img src="http://127.0.0.1:8000/images/books/book-6.svg"
+                 class="w-24 h-32 object-cover rounded-lg">
+
+            <div>
+                <h3 class="font-bold text-lg text-gray-800">Introduction to Algorithms</h3>
+                <p class="text-sm text-gray-500">Cormen et al.</p>
+                <p class="text-sm text-indigo-600 mt-2">JavaScript</p>
+            </div>
+        </div>
+
+        <div class="border-t mt-4 pt-4 text-sm space-y-2">
+            <p><strong>Propriétaire :</strong> Salma Bennani</p>
+            <p><strong>Type :</strong> Temporaire</p>
+            <p><strong>Offres :</strong> 2 offres reçues</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-3 mt-4">
+            <p class="font-semibold text-sm mb-2">Propositions :</p>
+
+            <div class="border-b pb-3 mb-3">
+                <p class="text-sm font-semibold">Grokking Algorithms</p>
+                <p class="text-xs text-gray-500">Aditya Bhargava</p>
+                <span class="inline-block mt-2 text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
+                    Acceptée
+                </span>
+            </div>
+
+            <div>
+                <p class="text-sm font-semibold">You Don't Know JS Yet</p>
+                <p class="text-xs text-gray-500">Kyle Simpson</p>
+                <span class="inline-block mt-2 text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
+                    Acceptée
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- DEMANDE 13 -->
+    <div class="bg-white rounded-xl shadow-sm p-5">
+
+        <div class="flex justify-between items-center mb-4">
+            <span class="text-sm font-semibold text-gray-500">Demande #13</span>
+            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs">Ouverte</span>
+        </div>
+
+        <div class="flex gap-4">
+            <img src="http://127.0.0.1:8000/images/books/book-5.svg"
+                 class="w-24 h-32 object-cover rounded-lg">
+
+            <div>
+                <h3 class="font-bold text-lg text-gray-800">Head First Design Patterns</h3>
+                <p class="text-sm text-gray-500">Eric Freeman</p>
+                <p class="text-sm text-indigo-600 mt-2">Développement</p>
+            </div>
+        </div>
+
+        <div class="border-t mt-4 pt-4 text-sm space-y-2">
+            <p><strong>Propriétaire :</strong> Yassine Amrani</p>
+            <p><strong>Type :</strong> Permanent</p>
+            <p><strong>Offres :</strong> 2 offres reçues</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-3 mt-4">
+            <p class="font-semibold text-sm mb-2">Propositions :</p>
+
+            <div class="border-b pb-3 mb-3">
+                <p class="text-sm font-semibold">API Design Patterns</p>
+                <p class="text-xs text-gray-500">JJ Geewax</p>
+                <span class="inline-block mt-2 text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded">
+                    En attente
+                </span>
+            </div>
+
+            <div>
+                <p class="text-sm font-semibold">The Pragmatic Programmer</p>
+                <p class="text-xs text-gray-500">Andrew Hunt & David Thomas</p>
+                <span class="inline-block mt-2 text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded">
+                    En attente
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- DEMANDE 12 -->
+    <div class="bg-white rounded-xl shadow-sm p-5">
+
+        <div class="flex justify-between items-center mb-4">
+            <span class="text-sm font-semibold text-gray-500">Demande #12</span>
+            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs">Ouverte</span>
+        </div>
+
+        <div class="flex gap-4">
+            <img src="http://127.0.0.1:8000/images/books/book-4.svg"
+                 class="w-24 h-32 object-cover rounded-lg">
+
+            <div>
+                <h3 class="font-bold text-lg text-gray-800">
+                    Patterns of Enterprise Application Architecture
+                </h3>
+                <p class="text-sm text-gray-500">Martin Fowler</p>
+                <p class="text-sm text-indigo-600 mt-2">DevOps</p>
+            </div>
+        </div>
+
+        <div class="border-t mt-4 pt-4 text-sm space-y-2">
+            <p><strong>Propriétaire :</strong> Rayan Filali</p>
+            <p><strong>Type :</strong> Temporaire</p>
+            <p><strong>Offres :</strong> 2 offres reçues</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-3 mt-4">
+            <p class="font-semibold text-sm mb-2">Propositions :</p>
+
+            <div class="border-b pb-3 mb-3">
+                <p class="text-sm font-semibold">RESTful Web APIs</p>
+                <p class="text-xs text-gray-500">Leonard Richardson</p>
+                <span class="inline-block mt-2 text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded">
+                    En attente
+                </span>
+            </div>
+
+            <div>
+                <p class="text-sm font-semibold">Design Patterns</p>
+                <p class="text-xs text-gray-500">Gamma et al.</p>
+                <span class="inline-block mt-2 text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded">
+                    En attente
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>
+    </main>
+    <script src="test.js"></script>
+
+</body>
+</html>
